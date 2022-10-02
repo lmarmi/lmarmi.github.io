@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>危险确认！</title>
+        <link rel="icon" href="chain.png" id="iocn" />
+    </head>
+    <body>
+        <style id="styel">
+            #conform{
+                position: absolute;
+                left: 50%;
+                background-color: aliceblue;
+                top: 50%;
+                width: 700px;
+                height: 400px;
+                transform: translate(-50%,-50%);
+                border: 2px solid;
+            }
+            .ovd {
+                font-size: 16px;
+                font-weight: 400;
+                color: rgba(6, 53, 239, 0.5);
+                line-height: 1.25;
+                margin-bottom: 16px;
+                text-align: center;
+            }
+            #ages{
+                top:100%;
+                width: 110px;
+                text-align: center;
+                height: 55px;
+                font-size: 35px;
+                color: cadetblue;
+                padding: 0;
+                margin: 0;
+            }
+            #colrs{
+                top:100%;
+                width: 110px;
+                text-align: center;
+                height: 55px;
+                font-size: 38px;
+                color: cadetblue;
+                padding: 0;
+                margin: 0;
+            }
+            #butt { 
+                width: 270px; 
+                height: 40px; 
+                border-width: 0px; 
+                border-radius: 3px; 
+                background: #00FF08; 
+                cursor: pointer; 
+                outline: none; 
+                font-family: Microsoft YaHei; 
+                color: black; 
+                font-size: 17px; 
+            }
+            #butt:hover { 
+                background: #50E80F;
+            }
+            #butt2 { 
+                width: 270px; 
+                height: 40px; 
+                border-width: 0px; 
+                border-radius: 3px; 
+                background: #DF2B2B; 
+                cursor: pointer; 
+                outline: none; 
+                font-family: Microsoft YaHei; 
+                color: white; 
+                font-size: 17px; 
+            }
+            #butt2:hover { 
+                background: #A71624;
+            }
+            #conform[hidden] {
+                display: none;
+            }
+            body{
+                background-image: url("https://iw233.cn/api.php?sort=mp");
+            }
+            #seses{
+                text-align: center;
+                top:50px;
+                font-size: 115px;
+            }
+            #homo114514{
+                text-align: center;
+            }
+            #ovc{
+                color: rgb(0, 255, 4);
+                text-align: center;
+                font-size: 200px;
+            }
+        </style> 
+        <div id="conform">
+            <h3 align="center"><strong>验证</strong></h3>
+            <p id="Chinese-warning" class="ovd">若观看以下内容，未成年人请在成年人的陪同下进行观看.</p>
+            <p id="English-warning" class="ovd">If you want to watch the following content, minors <strong>should be accompanied</strong> by adults.</p>
+            <h5 align="center">（征求意见）在右边的方框上选择您的意见：<input type="button" id="butt2" value="我同意(I agree it)" onclick="ag()" ></h5>
+            <h5 align="center">（征求意见）在右边的方框上选择您的意见：<input type="button" id="butt" value="我不同意(I do not agree it)" onclick="dag()" ></h5>
+            <p class="ovd">(Ask for comments) Select your comments in the box on the right:</p>
+        </div>
+        <div id="homo114514" hidden>
+            <h1 id="ovc">114514</h1>
+            <audio src="1145141919810.mp3" controls></audio>
+
+        </div>
+        <script type="text/javascript">
+            function ag(){
+                document.getElementById("conform").hidden = true;
+                document.getElementById("homo114514").hidden = false;
+                document.getElementById("iocn").href='dm3.jpg';
+                document.body.style.background = "url(dm3.jpg)";
+                document.title = '114514的homo 恼) 撅)'
+            }
+            function dag(){
+                window.location.href='https://lmarmi.github.io'
+            }
+        </script>
+</html>
