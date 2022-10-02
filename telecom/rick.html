@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Morlo PyProject 危险确认！</title>
+        <!-- Github-lmarmi (C)2022 -->
+        <link rel="icon" href="chain.png" />
+        <style>
+            #conform{
+                position: absolute;
+                left: 50%;
+                background-color: aliceblue;
+                top: 50%;
+                width: 700px;
+                height: 400px;
+                transform: translate(-50%,-50%);
+                border: 2px solid;
+            }
+            .ovd {
+                font-size: 16px;
+                font-weight: 400;
+                color: rgba(6, 53, 239, 0.5);
+                line-height: 1.25;
+                margin-bottom: 16px;
+                text-align: center;
+            }
+            #ages{
+                top:100%;
+                width: 110px;
+                text-align: center;
+                height: 55px;
+                font-size: 35px;
+                color: cadetblue;
+                padding: 0;
+                margin: 0;
+            }
+            #colrs{
+                top:100%;
+                width: 110px;
+                text-align: center;
+                height: 55px;
+                font-size: 38px;
+                color: cadetblue;
+                padding: 0;
+                margin: 0;
+            }
+            #butt { 
+                width: 270px; 
+                height: 40px; 
+                border-width: 0px; 
+                border-radius: 3px; 
+                background: #1E90FF; 
+                cursor: pointer; 
+                outline: none; 
+                font-family: Microsoft YaHei; 
+                color: white; 
+                font-size: 17px; 
+            }
+            #butt:hover { 
+                background: #5599FF;
+            }
+            #butt2 { 
+                width: 270px; 
+                height: 40px; 
+                border-width: 0px; 
+                border-radius: 3px; 
+                background: #DF2B2B; 
+                cursor: pointer; 
+                outline: none; 
+                font-family: Microsoft YaHei; 
+                color: white; 
+                font-size: 17px; 
+            }
+            #butt2:hover { 
+                background: #A71624;
+            }
+            #conform[hidden] {
+                display: none;
+            }
+            #vd{
+                width: 100%;
+                height: 100%;
+            }
+            body{
+                background-image: url("https://iw233.cn/api.php?sort=mp");
+                /*不知道从哪里找来的。。。*/
+            }
+        </style>
+    </head>
+    <body> 
+        <div id="conform">
+            <h3 align="center"><strong>年龄验证</strong></h3>
+            <p id="Chinese-warning" class="ovd">以下内容似乎不适合<strong>未满18岁</strong>的人群观看。在观看之前，我们需要优先验证您的年龄。</p>
+            <p id="English-warning" class="ovd">The following content <strong>does not</strong> seem to be suitable for people <strong>under the age of 18</strong>. Before viewing, we need to verify your age first.</p>
+            <h5 align="center">（年龄验证）在右边的方框上验证您的年龄：<input type="button" id="butt2" value="已满18岁(Over 18-years-old)" onclick="er(this)" ></h5>
+            <h5 align="center">（年龄验证）在右边的方框上验证您的年龄：<input type="button" id="butt" value="未满18岁(Under 18-years-old)" onclick="nostat()" ></h5>
+            <p class="ovd">(Age verification) verify your age in the box above</p>
+        </div>
+        <div id="vd" hidden>
+            <video id="vd" loop="loop" src="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4" controls></video>
+        </div>
+
+        <script type="text/javascript">
+            var cf = document.getElementById("conform");
+            var vd = document.getElementById("vd");
+            var bt = document.getElementById("butt")
+            var ths
+            function er(s){
+                ths = s
+                okstat()
+            }
+            function okstat(){
+                cf.hidden = true
+                vd.hidden = false
+                var ele = document.documentElement;
+                if (ele.requestFullscreen) {
+                    ele.requestFullscreen();
+                } else if (ele.mozRequestFullScreen) {
+                    ele.mozRequestFullScreen();
+                } else if (ele.webkitRequestFullScreen) {
+                    ele.webkitRequestFullScreen();
+                }
+                        }
+            function nostat(){
+                window.location.href='https://nlvac97.github.io'
+            }
+        </script>
+    </body>
+</html>
